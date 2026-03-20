@@ -348,9 +348,9 @@
   .dashboard-preview img {
     max-width: 100%;
     max-height: 100%;
-    border-radius: 10px;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    border: 1px solid var(--slate-200);
     object-fit: contain;
   }
 
@@ -791,11 +791,46 @@
 </section>
 
 <!-- ═══ SLIDE 6 — GIA' IN PRODUZIONE ═══ -->
-<section class="slide-dark" data-background-color="#0f172a">
-  <span class="tag">Gi&agrave; in produzione</span>
-  <h2>Non &egrave; un prototipo. Funziona oggi.</h2>
-  <div class="dashboard-preview stagger-item">
-    <img src="./dashboard.png" alt="Dashboard in produzione">
+<section class="slide-light" data-background-color="#F8FAFC">
+  <div class="two-col">
+    <div>
+      <span class="tag">Gi&agrave; in produzione</span>
+      <h2>Non &egrave; un prototipo.<br>Funziona oggi.</h2>
+      <p class="desc">Il sistema &egrave; operativo presso una grande infrastruttura di trasporto pubblico italiana. Multipli siti monitorati 24/7 con zero downtime della piattaforma.</p>
+      <div class="dashboard-preview stagger-item" style="margin-top: 1.5rem;">
+        <img src="./dashboard.png" alt="Dashboard in produzione">
+      </div>
+    </div>
+    <div class="proof-list">
+      <div class="proof-item stagger-item">
+        <div class="proof-dot"></div>
+        <div>
+          <h3>Produzione attiva</h3>
+          <p>Live su infrastruttura ridondata (2 server + broker dedicato)</p>
+        </div>
+      </div>
+      <div class="proof-item stagger-item">
+        <div class="proof-dot"></div>
+        <div>
+          <h3>Multi-sito</h3>
+          <p>Dashboard centralizzata con mappa interattiva di tutte le stazioni</p>
+        </div>
+      </div>
+      <div class="proof-item stagger-item">
+        <div class="proof-dot"></div>
+        <div>
+          <h3>Allarmi a 5 livelli</h3>
+          <p>Danger, warning, normal, offline, inactive — con storico eventi</p>
+        </div>
+      </div>
+      <div class="proof-item stagger-item">
+        <div class="proof-dot"></div>
+        <div>
+          <h3>Infrastruttura sicura</h3>
+          <p>TLS, deploy automatizzato, log rotation e monitoring attivi</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
