@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palette Preview — Cover Slides</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #111;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  h1.page-title {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.6;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1600px;
+    width: 100%;
+  }
+  .label {
+    color: #888;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .slide {
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6% 8%;
+    position: relative;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+  }
+  .slide:hover { transform: scale(1.02); }
+
+  /* Palette swatches */
+  .swatches {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
+  }
+  .swatch {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid rgba(128,128,128,0.2);
+  }
+  .swatch-label {
+    font-size: 0.55rem;
+    opacity: 0.5;
+    margin-top: 3px;
+    text-align: center;
+  }
+
+  .tag {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .slide h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+  .slide p {
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 80%;
+    opacity: 0.75;
+  }
+  .divider {
+    width: 48px;
+    height: 3px;
+    margin: 1rem 0;
+    border-radius: 2px;
+  }
+
+  /* ── A: Slate + Blue ── */
+  .slide-a {
+    background: #F8FAFC;
+    color: #0F172A;
+  }
+  .slide-a .tag { color: #0369A1; }
+  .slide-a .divider { background: #0369A1; }
+  .slide-a p { color: #334155; }
+
+  /* ── B: Nero + Oro ── */
+  .slide-b {
+    background: #171717;
+    color: #FFFFFF;
+  }
+  .slide-b .tag { color: #D4AF37; }
+  .slide-b .divider { background: #D4AF37; }
+  .slide-b p { color: #a3a3a3; }
+
+  /* ── C: Industrial Grey + Orange ── */
+  .slide-c {
+    background: #F8FAFC;
+    color: #334155;
+  }
+  .slide-c .tag { color: #F97316; }
+  .slide-c .divider { background: #F97316; }
+  .slide-c h2 { color: #64748B; }
+  .slide-c p { color: #94A3B8; }
+
+  /* ── D: Deep Blue + Amber ── */
+  .slide-d {
+    background: #0F172A;
+    color: #F8FAFC;
+  }
+  .slide-d .tag { color: #F59E0B; }
+  .slide-d .divider { background: #F59E0B; }
+  .slide-d p { color: #94A3B8; }
+
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr; max-width: 700px; }
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">Palette Preview — Slide 1 di ogni opzione</h1>
+
+<div class="grid">
+
+  <!-- A -->
+  <div>
+    <div class="label">Opzione A — Slate + Blue</div>
+    <div class="slide slide-a">
+      <div class="tag">Monitoraggio UPS in tempo reale</div>
+      <h2>Il vostro impianto,<br>sotto controllo.</h2>
+      <div class="divider"></div>
+      <p>Software di supervisione per infrastrutture critiche. Nessuna sostituzione hardware — solo integrazione intelligente sui PLC esistenti.</p>
+      <div class="swatches">
+        <div><div class="swatch" style="background:#0F172A"></div><div class="swatch-label">#0F172A</div></div>
+        <div><div class="swatch" style="background:#334155"></div><div class="swatch-label">#334155</div></div>
+        <div><div class="swatch" style="background:#0369A1"></div><div class="swatch-label">#0369A1</div></div>
+        <div><div class="swatch" style="background:#F8FAFC; border-color:#ccc"></div><div class="swatch-label">#F8FAFC</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B -->
+  <div>
+    <div class="label">Opzione B — Nero + Oro</div>
+    <div class="slide slide-b">
+      <div class="tag">Monitoraggio UPS in tempo reale</div>
+      <h2>Il vostro impianto,<br>sotto controllo.</h2>
+      <div class="divider"></div>
+      <p>Software di supervisione per infrastrutture critiche. Nessuna sostituzione hardware — solo integrazione intelligente sui PLC esistenti.</p>
+      <div class="swatches">
+        <div><div class="swatch" style="background:#171717; border-color:#333"></div><div class="swatch-label" style="color:#666">#171717</div></div>
+        <div><div class="swatch" style="background:#404040"></div><div class="swatch-label" style="color:#666">#404040</div></div>
+        <div><div class="swatch" style="background:#D4AF37"></div><div class="swatch-label" style="color:#666">#D4AF37</div></div>
+        <div><div class="swatch" style="background:#FFFFFF"></div><div class="swatch-label" style="color:#666">#FFFFFF</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C -->
+  <div>
+    <div class="label">Opzione C — Industrial Grey + Orange</div>
+    <div class="slide slide-c">
+      <div class="tag">Monitoraggio UPS in tempo reale</div>
+      <h2>Il vostro impianto,<br>sotto controllo.</h2>
+      <div class="divider"></div>
+      <p>Software di supervisione per infrastrutture critiche. Nessuna sostituzione hardware — solo integrazione intelligente sui PLC esistenti.</p>
+      <div class="swatches">
+        <div><div class="swatch" style="background:#64748B"></div><div class="swatch-label">#64748B</div></div>
+        <div><div class="swatch" style="background:#94A3B8"></div><div class="swatch-label">#94A3B8</div></div>
+        <div><div class="swatch" style="background:#F97316"></div><div class="swatch-label">#F97316</div></div>
+        <div><div class="swatch" style="background:#F8FAFC; border-color:#ccc"></div><div class="swatch-label">#F8FAFC</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- D -->
+  <div>
+    <div class="label">Opzione D — Deep Blue + Amber</div>
+    <div class="slide slide-d">
+      <div class="tag">Monitoraggio UPS in tempo reale</div>
+      <h2>Il vostro impianto,<br>sotto controllo.</h2>
+      <div class="divider"></div>
+      <p>Software di supervisione per infrastrutture critiche. Nessuna sostituzione hardware — solo integrazione intelligente sui PLC esistenti.</p>
+      <div class="swatches">
+        <div><div class="swatch" style="background:#1E40AF"></div><div class="swatch-label" style="color:#666">#1E40AF</div></div>
+        <div><div class="swatch" style="background:#3B82F6"></div><div class="swatch-label" style="color:#666">#3B82F6</div></div>
+        <div><div class="swatch" style="background:#F59E0B"></div><div class="swatch-label" style="color:#666">#F59E0B</div></div>
+        <div><div class="swatch" style="background:#0F172A; border-color:#333"></div><div class="swatch-label" style="color:#666">#0F172A</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
