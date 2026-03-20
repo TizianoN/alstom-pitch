@@ -483,9 +483,15 @@
     flex-direction: column;
     gap: 0.5rem;
   }
-  .contact-info span {
+  .contact-info span,
+  .contact-info a {
     font-size: 1rem;
     color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-info a:hover {
+    color: var(--accent);
   }
   .placeholder {
     color: var(--primary);
@@ -927,9 +933,9 @@
       <div class="contact-name">Tiziano Nicolai</div>
       <div class="contact-role">Consulente Infrastruttura IT</div>
       <div class="contact-info">
-        <span>hello@tizianonicolai.com</span>
-        <span>+39 351 931 2034</span>
-        <span>linkedin.com/in/tiziano-nicolai-b67b73122</span>
+        <a href="mailto:hello@tizianonicolai.com">hello@tizianonicolai.com</a>
+        <a href="tel:+393519312034">+39 351 931 2034</a>
+        <a href="https://www.linkedin.com/in/tiziano-nicolai-b67b73122/" target="_blank">LinkedIn</a>
       </div>
     </div>
   </div>
