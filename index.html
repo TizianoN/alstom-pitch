@@ -522,6 +522,37 @@
     overflow: hidden;
   }
 
+  /* ── Mobile: rotate overlay ── */
+  .rotate-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--slate-900);
+    color: var(--slate-50);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    font-family: 'Inter', sans-serif;
+  }
+  .rotate-overlay svg {
+    animation: rotate-hint 2s ease-in-out infinite;
+  }
+  @keyframes rotate-hint {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(90deg); }
+  }
+  .rotate-overlay p {
+    font-size: 1rem;
+    color: var(--secondary);
+    text-align: center;
+    padding: 0 2rem;
+  }
+  @media (max-width: 768px) and (orientation: portrait) {
+    .rotate-overlay { display: flex; }
+  }
+
   /* ── Mobile: padding ridotto ── */
   @media (max-width: 768px) {
     .reveal .slides section {
@@ -569,6 +600,11 @@
 </style>
 </head>
 <body>
+
+<div class="rotate-overlay">
+  <svg width="48" height="48" fill="none" stroke="#94A3B8" stroke-width="1.5" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+  <p>Ruota il telefono in orizzontale<br>per visualizzare la presentazione</p>
+</div>
 
 <div class="reveal">
 <div class="slides">
